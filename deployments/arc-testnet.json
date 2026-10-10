@@ -1,0 +1,18 @@
+{
+  "chainId": 5042002,
+  "name": "Arc Testnet",
+  "rpc": "https://rpc.testnet.arc.io",
+  "explorer": "https://explorer.testnet.arc.io",
+  "version": "fishduel-arc-1",
+  "contract": "0x55675f0415E8313F47cb290B874DCbC00cfd3642",
+  "deployTx": "0xe0f77f668f820a907b169055d18cee5cd4b2da45ae951238632de4bb7c50726a",
+  "deployer": "0x8EaAe9f664214987204616Dd8145BAcad48044F6",
+  "sinks": {
+    "liquidity": "0xA7832aDE808De32006120237c5eE8d326612fac8",
+    "team": "0x8EaAe9f664214987204616Dd8145BAcad48044F6",
+    "burn": "0x09ddE94a5E2F346dCD8678c6011e19bA962635c8"
+  },
+  "derivation": "m/44'/60'/0'/0/0 deployer and team, index 1 liquidity, index 2 burn",
+  "unit": "1000000000000000000",
+  "note": "Native USDC uses 18 decimals. 1e18 is 1 USDC and stands in for 1 trial GNOT. No FISH ledger is issued."
+}
