@@ -3,16 +3,108 @@
   "name": "Arc Testnet",
   "rpc": "https://rpc.testnet.arc.io",
   "explorer": "https://explorer.testnet.arc.io",
-  "version": "fishduel-arc-1",
-  "contract": "0x55675f0415E8313F47cb290B874DCbC00cfd3642",
-  "deployTx": "0xe0f77f668f820a907b169055d18cee5cd4b2da45ae951238632de4bb7c50726a",
+  "version": "fishduel-arc-2",
+  "contract": "0x2Cbb115ccb69c8bae2FB2FCdAa68B80dBa0d0670",
+  "deployTx": "0x2a97bc8a739ecd3a5cd263febd821ba41e8e4a4cf021cc30ca895cfa00bf99d6",
+  "contracts": {
+    "FishDuel": {
+      "version": "fishduel-arc-2",
+      "address": "0x2Cbb115ccb69c8bae2FB2FCdAa68B80dBa0d0670",
+      "deployTx": "0x2a97bc8a739ecd3a5cd263febd821ba41e8e4a4cf021cc30ca895cfa00bf99d6"
+    },
+    "FishProfile": {
+      "version": "profile-arc-2",
+      "address": "0x6130bC38A58bd658c04152673d50C0339C86D6C3",
+      "deployTx": "0xdf2c216a63133b3c27000b2fb6eed61a81e569d4c2a95d863a60b62b0f7559b5",
+      "claimAdminTx": "0x6bf28f7154f08847eb57d2c9b57fa8f41b06fa7e0bcfa0de6b21178eedfde663"
+    },
+    "FishParty": {
+      "version": "party-arc-2",
+      "address": "0x285F5345AD2f1421F53f29Fa1F3Cd77fef4e63Be",
+      "deployTx": "0x9cdf1f775e0cd26aee9e1b8092f852c3fab8b564d623543632c933f7558a920b",
+      "claimAdminTx": "0x2811975ee41b310cf8c4edece28e2c332466daf01a3717d1e7175a9360be516e"
+    },
+    "FishNFT": {
+      "version": "fish-arc-5",
+      "address": "0x02081A2efBb0F14d4DEBfA5aa4D16E62E91373da",
+      "deployTx": "0x964e4d369bd1019f4106d9c00cd56e21374831dfe3e10f45ae1b39d831f36766",
+      "mintPrice": "5000000000000000000",
+      "setMintFeeTx": "0x5cf2244f5f47c7b4dd4205e81b399e4129e19af3e377f4b09f397c0422c395c1",
+      "stakeMin": "10000000000000000000",
+      "royaltyBps": 500,
+      "protocolBps": 200
+    },
+    "FishToken": {
+      "version": "fishtoken-arc-1",
+      "address": "0x0441c265496029829Ac79942dC917ECFdAb1d2a3",
+      "deployTx": "0xd13d1e6dfda0925b5c1d06eeaf1df51e94dcb40c4c9470482b26d733f9501421",
+      "releaseTx": "0x02ea1e8a15c33f72207808b8207612f447fda1e2c909293e10785ddba0063172",
+      "decimals": 6,
+      "supply": "100000000000000"
+    },
+    "FishEarn": {
+      "version": "fishearn-arc-1",
+      "address": "0x7241E458Ed2ead6156045D61E6283Bda86A39293",
+      "deployTx": "0x6295094c1d82364fde975ce75a6ea8aeb3572c89021da883fe521825698f070f",
+      "duel": "0x2Cbb115ccb69c8bae2FB2FCdAa68B80dBa0d0670",
+      "season": "43000000000000"
+    }
+  },
+  "previous": {
+    "FishDuel": {
+      "version": "fishduel-arc-1",
+      "address": "0x55675f0415E8313F47cb290B874DCbC00cfd3642",
+      "deployTx": "0xe0f77f668f820a907b169055d18cee5cd4b2da45ae951238632de4bb7c50726a"
+    },
+    "FishProfile": {
+      "version": "profile-arc-1",
+      "address": "0xa6a1CA3C1C6609Ae2223a66d8AC2eeF87Ec7aeBd",
+      "deployTx": "0x794e768669193b33199a5744ecebbbaba729e29c06fcd0a821330f42a395b587",
+      "claimAdminTx": "0x1d2c93e91f73d831c20c8b673bfae2ea3c3fce1c6fa150d9b083a299e2acf2f7"
+    },
+    "FishParty": {
+      "version": "party-arc-1",
+      "address": "0x337e25cA3C53E34B0FA49Ae2873d2dfE9F3001D6",
+      "deployTx": "0x5b5b1b54ce23d8ff78d22de7f38dd69e93ba7ad12bd768cd4f91426b2d5bb91b",
+      "claimAdminTx": "0x954909cc8914743350680cb17737d7aeb1e212682819cd22636858d6a1be4ca8"
+    },
+    "FishNFTArc4": {
+      "version": "fish-arc-4",
+      "address": "0xAf52A0e0A9a82457D50Ad99858A9Ee60E566B5f3",
+      "deployTx": "0x654f5c016eb93a2883e22680940e4584f80296fff9e65b16d159a57ac0d4acfe",
+      "mintPrice": "150000000000000000000",
+      "stakeMin": "10000000000000000000",
+      "royaltyBps": 500,
+      "protocolBps": 200
+    },
+    "FishNFT": {
+      "version": "fish-arc-3",
+      "address": "0xd2CA9224Ee155eb238D70b4AB469b8cf002c2c5A",
+      "deployTx": "0x6bfdaba91f61e3339640296e6c0385042724971332db18d0d1288a16519a7356",
+      "mintPrice": "150000000000000000000",
+      "stakeMin": "10000000000000000000",
+      "royaltyBps": 500,
+      "protocolBps": 200
+    },
+    "FishNFTArc2": {
+      "version": "fish-arc-2",
+      "address": "0x01C405f7b3E0B2A1f57d6AF1aD042b102e37a7dB",
+      "deployTx": "0xbf142d2dce3f40eb91c9bdd4113395ae0bcadbfb3159ac0d6d6f21b3910b9b4e",
+      "setArtTx": "0x473627d8297e067290596c819bd87447f513091a7d37e8be60c5b5c7d943639b"
+    },
+    "FishNFTArc1": {
+      "version": "fish-arc-1",
+      "address": "0x1C5Ef20E827b9EB4cd3bf5Ed3B0F732FA36fDD6f",
+      "deployTx": "0x3466675e35de29811277e2896d679e58977578ebcd4df06f84b0e16729fbcd61",
+      "setArtTx": "0x496372c79c8cfd0eb4a6b28ec10fccb614848a1e9d4819aa14c174588f9abd8f"
+    }
+  },
   "deployer": "0x8EaAe9f664214987204616Dd8145BAcad48044F6",
   "sinks": {
     "liquidity": "0xA7832aDE808De32006120237c5eE8d326612fac8",
     "team": "0x8EaAe9f664214987204616Dd8145BAcad48044F6",
     "burn": "0x09ddE94a5E2F346dCD8678c6011e19bA962635c8"
   },
-  "derivation": "m/44'/60'/0'/0/0 deployer and team, index 1 liquidity, index 2 burn",
   "unit": "1000000000000000000",
-  "note": "Native USDC uses 18 decimals. 1e18 is 1 USDC and stands in for 1 trial GNOT. No FISH ledger is issued."
+  "note": "Native USDC uses 18 decimals. 1e18 is 1 USDC. FISH uses 6 decimals. 1000000 units is 1 FISH. Season FISH sits on FishEarn. Ecosystem, community, public sale, and team sit on the team wallet. Liquidity sits on the liquidity sink. The earlier contracts stay on chain. Fish, stakes, crews, and sailor cards there do not move. fish-arc-5 replaces the collection only. FishDuel, FishProfile, and FishParty stay on arc-2. Old FishNFT tokens do not move."
 }

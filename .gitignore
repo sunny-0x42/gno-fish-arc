@@ -6,3 +6,8 @@ lib/
 .env.*
 *.key
 .DS_Store
+web/node_modules/
+web/dist/
+web/coverage/
+web/.vercel/
+web/public/models/common-clownfish.glb

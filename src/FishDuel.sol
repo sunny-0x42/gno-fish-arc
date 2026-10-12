@@ -7,11 +7,11 @@ import {MessageHashUtils} from "@openzeppelin/contracts/utils/cryptography/Messa
 
 /// @title FishDuel
 /// @author Shoal
-/// @notice Arc testnet port of gno.land fishduel-1. Two people mint, stake, and settle one covered kill.
-///         Swim stays off chain. This contract is not the shoal/fish NFT collection and it does not mint FISH.
-/// @dev Native value is Arc USDC, 18 decimals. 1e18 here stands in for 1 trial GNOT.
-///      Gno binds an ed25519 mark because a realm cannot check a wallet secp256k1 signature.
-///      Arc can. Register binds a mark address, and each sample is an EIP-191 signature over `canon`.
+/// @notice Shoal duel on Arc testnet. Two people mint, stake, and settle one covered kill.
+///         Swim stays in the browser. This contract is not the FishNFT collection and it does not mint a FISH ledger token.
+/// @dev Native value is Arc USDC, 18 decimals. 1e18 is 1 USDC.
+///      Register binds a mark address. The mark may be the fish owner or a session key.
+///      Each sample is an EIP-191 signature over `canon`.
 contract FishDuel is ReentrancyGuard {
     uint256 public constant UNIT = 1e18;
     uint256 public constant MINT_FEE = 1e18;
@@ -195,7 +195,7 @@ contract FishDuel is ReentrancyGuard {
     }
 
     function version() external pure returns (string memory) {
-        return "fishduel-arc-1";
+        return "fishduel-arc-2";
     }
 
     function ownerOf(uint256 id) external view returns (address) {
@@ -297,7 +297,7 @@ contract FishDuel is ReentrancyGuard {
         });
     }
 
-    /// @dev 60% liquidity, 10% burn, and the remaining 30% to team. Matches fishduel `payMint`.
+    /// @dev 60% liquidity, 10% burn, and the remaining 30% to team.
     function _payMint(uint256 fee) internal {
         uint256 lp = fee * 6000 / 10000;
         uint256 crew = fee * 2000 / 10000;
@@ -307,7 +307,7 @@ contract FishDuel is ReentrancyGuard {
         _send(burn, ash);
     }
 
-    /// @dev 80 / 10 / 3 / 3 / 4. Cheer joins team. Dust joins buyback. Matches fishduel `splitKill`.
+    /// @dev 80 / 10 / 3 / 3 / 4. Cheer joins team. Dust joins burn.
     function _splitKill(uint256 covered) internal pure returns (uint256 killer, uint256 lp, uint256 crew, uint256 buyback) {
         killer = covered * 80 / 100;
         lp = covered * 10 / 100;
